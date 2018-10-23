@@ -61,12 +61,15 @@ namespace ChessBoard_.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This application displays a chessboard with given dimensions of height and width, according to the principle:
+        ///   Looks up a localized string similar to This application displays a chessboard with given height and width, according to the principle:
         ///* * * * * *
         /// * * * * * *
         ///* * * * * *
         /// * * * * * *
-        ///The program is launched from the command line..
+        ///The application is launched from the command line.
+        ///
+        ///Input parameters: &lt;height of chess board&gt; &lt;width of chess board&gt;
+        ///Сhessboard sizes can be up to 80 units..
         /// </summary>
         internal static string ReadMe {
             get {

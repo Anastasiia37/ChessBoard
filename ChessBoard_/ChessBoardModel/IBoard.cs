@@ -1,13 +1,17 @@
-﻿namespace ChessBoardModel
+﻿// <copyright file="IBoard.cs" company="Peretiatko Anastasiia">
+// Copyright (c) Peretiatko Anastasiia. All rights reserved.
+// </copyright>
+
+namespace ChessBoardModel
 {
     public interface IBoard
     {
-        int Height
+        byte Height
         {
             get;
         }
 
-        int Width
+        byte Width
         {
             get;
         }       

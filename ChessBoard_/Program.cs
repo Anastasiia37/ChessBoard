@@ -1,4 +1,8 @@
-﻿namespace ChessBoardUI
+﻿// <copyright file="Program.cs" company="Peretiatko Anastasiia">
+// Copyright (c) Peretiatko Anastasiia. All rights reserved.
+// </copyright>
+
+namespace ChessBoardUI
 {   
     /// <summary>
     /// Contains the Main function from where the program starts its execution

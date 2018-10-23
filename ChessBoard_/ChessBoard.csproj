@@ -44,12 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChessBoardApplication.cs" />
-    <Compile Include="ChessBoardModel\ChessBoard.cs" />
-    <Compile Include="ChessBoardModel\Cell.cs" />
-    <Compile Include="ChessBoardModel\ChessBoardConsoleViewer.cs" />
+    <Compile Include="ChessBoardModel\Board.cs" />
+    <Compile Include="ChessBoardModel\ChessBoardCellInitializer.cs" />
+    <Compile Include="ChessBoardModel\ChessCell.cs" />
+    <Compile Include="ChessBoardConsoleViewer.cs" />
     <Compile Include="ChessBoardModel\Colors.cs" />
     <Compile Include="ChessBoardModel\IBoard.cs" />
     <Compile Include="ChessBoardModel\ICell.cs" />
+    <Compile Include="ChessBoardModel\ICellInitializer.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -63,13 +66,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
