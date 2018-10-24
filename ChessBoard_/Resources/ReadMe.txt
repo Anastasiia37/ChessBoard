@@ -6,4 +6,4 @@
 The application is launched from the command line.
 
 Input parameters: <height of chess board> <width of chess board>
-Сhessboard sizes can be up to 80 units.
+Сhessboard sizes can be up to 79 units.

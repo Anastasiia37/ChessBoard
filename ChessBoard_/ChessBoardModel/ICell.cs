@@ -4,8 +4,17 @@
 
 namespace ChessBoardModel
 {
+    /// <summary>
+    /// Interface for cells
+    /// </summary>
     public interface ICell
     {
+        /// <summary>
+        /// Gets the colour from the icell
+        /// </summary>
+        /// <value>
+        /// The colour
+        /// </value>
         Colors Colour
         {
             get;

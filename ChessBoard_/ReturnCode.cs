@@ -4,9 +4,19 @@
 
 namespace ChessBoardUI
 {
+    /// <summary>
+    /// Return codes for program
+    /// </summary>
     public enum ReturnCode
     {
+        /// <summary>
+        /// The success completion
+        /// </summary>
         Success,
+
+        /// <summary>
+        /// The error occurred
+        /// </summary>
         Error
     }
 }

@@ -6,10 +6,17 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ChessBoardModel.Tests
 {
-    [TestClass()]
+    /// <summary>
+    /// Tests the ChessBoardCellInitializer class
+    /// </summary>
+    [TestClass]
     public class ChessBoardCellInitializerTests
-    {       
-        [TestMethod()]
+    {
+        /// <summary>
+        /// Tests the Initialize method for correct input
+        /// Expected einitialized cells with correct colors, black colour goes first 
+        /// </summary>
+        [TestMethod]
         public void InitializeTest_CorrectInputBlackFirst_ReturnedInitializedCellsWithCorrectColors()
         {
             // Arrange
@@ -37,8 +44,11 @@ namespace ChessBoardModel.Tests
             }
         }
 
-        [TestMethod()]
-        public void InitializeTest_CorrectInputWhiteFirst__ReturnedInitializedCellsWithCorrectColors()
+        /// <summary>
+        /// Tests the Initialize method for correct input
+        /// Expected einitialized cells with correct colors, white colour goes first 
+        /// </summary>        [TestMethod()]
+        public void InitializeTest_CorrectInputWhiteFirst_ReturnedInitializedCellsWithCorrectColors()
         {
             // Arrange
             int width = 2;

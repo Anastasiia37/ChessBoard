@@ -3,25 +3,30 @@
 // </copyright>
 
 using System;
-using ChessBoardModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SoftAssert;
 
-namespace ChessBoardTests
+namespace ChessBoardModel.Tests
 {
+    /// <summary>
+    /// Tests the Board class
+    /// </summary>
     [TestClass]
-    public class ChessBoardModelTests
-    {    
+    public class BoardTests
+    {
+        /// <summary>
+        /// Tests the Initialize method for correct input
+        /// Expected new instance of Board with correct properties
+        /// </summary>
         [TestMethod]
-        public void ChessBoard_InitializeTest_CorrectInput_ReturnNewChessBoardWithCorrectProperties()
+        public void Board_InitializeTest_CorrectInput_ReturnNewChessBoardWithCorrectProperties()
         {
             // Arrange
             byte height = 5;
             byte width = 10;
-
-            // Act
             ICellInitializer initializer = new ChessBoardCellInitializer();
 
+            // Act
             Board chessBoard = new Board(width, height, initializer);
 
             // Assert
@@ -33,31 +38,40 @@ namespace ChessBoardTests
                 );
         }
 
-
-
+        /// <summary>
+        /// Tests the Indexer for incorrect indexes
+        /// Expected IndexOutOfRangeException
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(IndexOutOfRangeException))]
-        public void ChessBoard_InitializeTest_TestForIncorrectIndex_ExpectedIndexOutOfRangeException()
+        public void Board_IndexerTest_TestForIncorrectIndex_ExpectedIndexOutOfRangeException()
         {
             // Arrange
             byte width = 10;
             byte height = 5;
-            int xPosition = 9;
-            int yPosition = 6;
-
-            // Act
+            int line = 9;
+            int column = 6;
+            Colors expectedColour = Colors.White;
             ICellInitializer initializer = new ChessBoardCellInitializer();
             Board chessBoard = new Board(width, height, initializer);
 
+            // Act
+            Colors actualColour = chessBoard[line, column].Colour;
+
             // Assert
-            Assert.AreEqual(Colors.White, chessBoard[xPosition, yPosition].Colour);
+            Assert.AreEqual(expectedColour, actualColour);
         }
-
-
+        
+        /// <summary>
+        /// Tests the Initialize method for zero incorrect input, expected argument exception
+        /// </summary>
+        /// <param name="width">The width</param>
+        /// <param name="height">The height</param>
         [DataTestMethod]
         [ExpectedException(typeof(ArgumentException))]
         [DataRow(0, 2)]
-        public void ChessBoard_InitializeTest_IncorrectInput_ExpectedArgumentException(
+        [DataRow(2, 0)]
+        public void Board_InitializeTest_IncorrectInput_ExpectedArgumentException(
             byte width, byte height)
         {
             // Arrange

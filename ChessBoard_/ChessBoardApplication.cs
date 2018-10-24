@@ -7,8 +7,16 @@ using ChessBoardModel;
 
 namespace ChessBoardUI
 {
+    /// <summary>
+    /// Application for using chessboard
+    /// </summary>
     public class ChessBoardApplication
     {
+        /// <summary>
+        /// Runs the application
+        /// </summary>
+        /// <param name="args">The arguments from command lines</param>
+        /// <returns>Return code: 0 if success, 1 if error occurred</returns>
         public int Run(string[] args)
         {
             try
@@ -37,7 +45,8 @@ namespace ChessBoardUI
         /// </summary>
         private void ShowInstructions()
         {
-            Console.WriteLine(Environment.NewLine + "Input parameters: <width of chess board> <height of chess board>");
+            Console.WriteLine(Environment.NewLine 
+                + "Input parameters: <width of chess board> <height of chess board>");
         }
     }
 }

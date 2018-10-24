@@ -2,19 +2,21 @@
 // Copyright (c) Peretiatko Anastasiia. All rights reserved.
 // </copyright>
 
-using ChessBoardModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ChessBoardTests
+namespace ChessBoardModel.Tests
 {
     /// <summary>
-    /// Summary description for ChessCellTest
+    /// tests the ChessCell class
     /// </summary>
     [TestClass]
     public class ChessCellTests
     {
+        /// <summary>
+        /// Tests the cell initialization
+        /// </summary>
         [TestMethod]
-        public void Cell_CellInitialization()
+        public void CellInitializationTest()
         {
             //Arrange
             Colors expectedColour = Colors.Black;

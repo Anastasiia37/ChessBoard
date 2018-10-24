@@ -69,7 +69,7 @@ namespace ChessBoard_.Properties {
         ///The application is launched from the command line.
         ///
         ///Input parameters: &lt;height of chess board&gt; &lt;width of chess board&gt;
-        ///Сhessboard sizes can be up to 80 units..
+        ///Сhessboard sizes can be up to 79 units
         /// </summary>
         internal static string ReadMe {
             get {
